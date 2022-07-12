@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+}
+
+#form-validation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(./images/lucas-kapla-wQLAGv4_OYs-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.wrapper {
+  width: 50%;
+  padding: 2% 2% 5%;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  backdrop-filter: blur(10px);
+}
+
+.wrapper > h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #0c0b0b;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+}
+
+.form-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 45%);
+  grid-column-gap: 10%;
+  grid-row-gap: 5%;
+}
+
+.form-wrapper > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-wrapper > div input {
+  padding: 8px 5px;
+  border-bottom: 1px solid rgba(245, 245, 245, 0.795);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+  outline: none;
+  color: rgba(245, 245, 245, 0.849);
+}
+
+.form-wrapper > div input::placeholder {
+  color: rgba(245, 245, 245, 0.429);
+}
+
+.form-wrapper > div > p {
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  color: #fe7b02;
+}
+
+.form-wrapper > div > label {
+  font-size: 0.9rem;
+  color: whitesmoke;
+}
+
+.form-wrapper > button {
+  background-image: linear-gradient(120deg, #fe6400, #04afe3);
+  padding: 8px 8px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-weight: 500;
+  grid-column: span 2;
+  margin: .5rem auto 0;
+  width: 30%;
+  transition: all 0.5s ease-out;
+  color: whitesmoke;
+}
+
+.form-wrapper > button:hover {
+  background-image: linear-gradient(120deg, #04afe3 20%, #fe6400);
+  color: black;
+}
+
+form input.valid {
+  border-color: rgb(12, 100, 12);
+}
+
+form input.invalid {
+  border-color: #fe7b02;
+}
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .wrapper {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  #form-validation {
+    align-items: center;
+    height: 100vh;
+  }
+
+  .wrapper {
+    width: 80%;
+    height: 99vh;
+  }
+
+  .form-wrapper {
+    grid-template-columns: 100%;
+  }
+
+  .form-wrapper button {
+    grid-column: initial;
+    width: 50%;
+  }
+}
